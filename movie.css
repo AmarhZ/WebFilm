@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgba(224, 207, 207, 0) ;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative ;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -8px #ffffff;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('Asset/blck.jpeg') no-repeat center center/cover;
+    
+    z-index: -1;
+}
+
+header ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+
+header nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+header nav .logo_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .logo_ul img {
+    width: 90px;
+}
+
+header nav .logo_ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav .logo_ul li {
+    padding: 3px 15px;
+}
+
+header nav .logo_ul ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: .3s linear;
+}
+
+header nav .logo_ul ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header .content {
+    position: relative;
+    color: #fff;
+    margin-top: 50px;
+    padding-left: 50px;    
+}
+
+
+header section 
+{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 380px;
+    color: #fff;
+}
+
+header .coba
+{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 125px;
+    color: #fff;
+}
+
+
+
+header section .cards
+{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+header section .cards::-webkit-scrollbar
+{
+   display: none;
+}
+
+header section .cards .card
+{
+    position: relative;
+    min-width: 150px;
+    height: 200px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+}
+
+header section .cards .card .poster
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards .card:hover
+{
+   min-width: 250px;
+   overflow: hidden;
+}
+
+
+header section .cards .card .rest_card
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left:0%;
+    top: 0%;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+header section .cards .card .rest_card img
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+header section .cards .card  .rest_card::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+header section .cards .card  .rest_card .cont
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .cards .card  .rest_card .cont .sub
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .cards .card  .rest_card .cont .sub p
+{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7);
+}
+
+header section .cards .card  .rest_card .cont .sub h3
+{
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+header section .cards .card  .rest_card .cont .sub h3 span
+{
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+header section .cards .card  .rest_card .cont .sub h3 i
+{
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+header section .cards .card.card:hover .rest_card
+{
+    opacity: 1;
+}
+
+header section .bi-chevron-left,
+.bi-chevron-right
+{
+    position:absolute;
+    top: 50px;
+    left: 3%;
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 255, 255, .3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+
+header section .bi-chevron-right
+{
+    left: unset;
+    right: 5%;
+}
+
+header section:hover .bi-chevron-right
+{
+    opacity: 1;
+}
+
+header section:hover  .bi-chevron-left
+{
+    opacity: 1;
+}
+
